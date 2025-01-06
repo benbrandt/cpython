@@ -202,7 +202,7 @@ shutdown(how) -- shut down traffic in one or both directions\n\
 # define USE_GETHOSTBYNAME_LOCK
 #endif
 
-#if defined(__APPLE__) || defined(__CYGWIN__) || defined(__NetBSD__)
+#if defined(__APPLE__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__wasi__)
 #  include <sys/ioctl.h>
 #endif
 
