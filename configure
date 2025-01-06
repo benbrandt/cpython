@@ -7176,7 +7176,7 @@ then :
   Emscripten) :
      ;; #(
   WASI) :
-    as_fn_error $? "WASI dynamic linking is not implemented yet." "$LINENO" 5 ;; #(
+     ;; #(
   *) :
     as_fn_error $? "--enable-wasm-dynamic-linking only applies to Emscripten and WASI" "$LINENO" 5
    ;;
@@ -32993,4 +32993,3 @@ Platform \"$host\" with compiler \"$ac_cv_cc_name\" is not supported by the
 CPython core team, see https://peps.python.org/pep-0011/ for more information.
 " >&2;}
 fi
-
