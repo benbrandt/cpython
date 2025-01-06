@@ -559,11 +559,8 @@ def requires_subprocess():
     """Used for subprocess, os.spawn calls, fd inheritance"""
     return unittest.skipUnless(has_subprocess_support, "requires subprocess support")
 
-# Emscripten's socket emulation and WASI sockets have limitations.
-has_socket_support = not (
-    is_emscripten
-    or is_wasi
-)
+# Emscripten's socket emulation has limitations.
+has_socket_support = not is_emscripten
 
 def requires_working_socket(*, module=False):
     """Skip tests or modules that require working sockets
